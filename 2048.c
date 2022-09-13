@@ -1,7 +1,7 @@
 /*
  =============================================================================
  Nom         : 2048.c
- Auteur      : VoltXd
+ Auteur      : Pierre-Alexandre Peyronnet
  Description : Version console du jeu "2048"
  =============================================================================
  */
@@ -123,6 +123,7 @@ void generePlateau(int *c) //Cree la grille de debut de partie
 
 void affichPlateau(const int *c , int score) //Affiche le tableau tour par tour et affiche le score
 {
+	system("cls");
     int i , sizeTab[16] ;
     taille(c , sizeTab) ;
     printf("\n _______________________________                Score : %d\n|	|	|	|	|\n|", score) ;
@@ -243,7 +244,7 @@ void taille(const int *c , int *t) //Permet de trier les nombres par taille
 int commandePlateau(int *c , char dir) //Applique le choix du joueur puis ajoute 2 ou 4 dans une case aleatoire
 {
     int i , test = 0 , sommePoint = 0 , verifIn = 0 , verifCombin[16] = {0} ;
-    if (dir == 'Z' || dir == 'z') //DÃ©placement vers le haut
+    if (dir == 'Z' || dir == 'z') //Déplacement vers le haut
     {
         while (test != 1)
         {
